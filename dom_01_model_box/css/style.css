@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul,
+ol {
+  list-style: none;
+}
+.modal-auth .modal-dialog {
+  width: 400px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 40px;
+  border-radius: 5px;
+  z-index: 1;
+}
+.modal-auth .overlay {
+  background-color: rgba(0, 0, 0, 0.288);
+  position: fixed;
+  inset: 0;
+}
+.modal-auth .tab-nav ul {
+  display: flex;
+}
+.modal-auth .tab-nav ul li {
+  flex: 1 1 auto;
+}
+.modal-auth .tab-nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #eeeeee;
+}
+.modal-auth .tab-nav ul li:first-child a {
+  border-radius: 5px 0 0 0;
+}
+.modal-auth .tab-nav ul li:last-child a {
+  border-radius: 0 5px 0 0;
+}
+.modal-auth .tab-nav ul li a.active {
+  background-color: #fff;
+}
+.modal-auth .tab-content {
+  padding: 20px;
+}
+/* xu ly an hien */
+
+.modal-auth {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  transition-property: opacity, visibility;
+}
+.modal-auth.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* active login va register  */
+.modal-auth .tab-content .tab-panel:not(.active) {
+  display: none;
+}
+/* css login form  */
+.modal-auth .login-form .form-group {
+  margin-bottom: 15px;
+}
+.modal-auth .login-form .form-group label {
+  display: block;
+  margin-bottom: 10px;
+}
+.modal-auth .login-form .form-group input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.modal-auth .login-form .btn {
+  width: 100%;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal-auth .login-form .error {
+  color: red;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+.modal-auth .login-form .has-error .field-item {
+  border-color: red;
+}
+
+.modal-auth .login-form .msg {
+  color: red;
+}
+.modal-auth .login-form .password-field {
+  position: relative;
+}
+.modal-auth .login-form .password-field .show-password {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-auth .login-form .password-field .show-password svg:first-child {
+  display: none;
+}
+.modal-auth .login-form .password-field .show-password.hide svg:first-child {
+  display: block;
+}
+.modal-auth .login-form .password-field .show-password.hide svg + svg {
+  display: none;
+}
