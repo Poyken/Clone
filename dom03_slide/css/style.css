@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+img {
+  max-width: 100%;
+}
+/* .carousel .carousel-inner .item:not(.active) {
+  display: none;
+} */
+.carousel .carousel-inner {
+  display: flex;
+  /* width: 2304px; */
+  touch-action: manipulation;
+  transition: translate 0.4s ease;
+}
+.carousel.drag {
+  cursor: grab;
+}
+/* .carousel .carousel-inner .item {
+  width: 768px;
+} */
+.carousel .carousel-nav span {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: gray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.carousel .carousel-nav span.prev {
+  left: 5px;
+}
+.carousel .carousel-nav span.next {
+  right: 5px;
+}
+.carousel .carousel-dots {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  gap: 10px;
+  justify-content: center;
+}
+.carousel .carousel-dots span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+.carousel .carousel-dots span.active,
+.carousel .carousel-dots span:hover {
+  cursor: pointer;
+  background-color: gold;
+}
